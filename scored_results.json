@@ -1,0 +1,512 @@
+[
+  {
+    "input_id": "case_001",
+    "prompt": "action_items_strict",
+    "final_score": 9.15,
+    "metrics": {
+      "accuracy": 10,
+      "relevance": 10,
+      "completeness": 8,
+      "consistency": 10,
+      "usefulness": 9,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00067
+    }
+  },
+  {
+    "input_id": "case_001",
+    "prompt": "action_items_loose",
+    "final_score": 8.6,
+    "metrics": {
+      "accuracy": 10,
+      "relevance": 10,
+      "completeness": 9,
+      "consistency": 10,
+      "usefulness": 9,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00093
+    }
+  },
+  {
+    "input_id": "case_001",
+    "prompt": "decisions_strict",
+    "final_score": 8.4,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00036
+    }
+  },
+  {
+    "input_id": "case_001",
+    "prompt": "decisions_loose",
+    "final_score": 8.0,
+    "metrics": {
+      "accuracy": 10,
+      "relevance": 8,
+      "completeness": 9,
+      "consistency": 10,
+      "usefulness": 9,
+      "structure": 3,
+      "conciseness": 7,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00191
+    }
+  },
+  {
+    "input_id": "case_001",
+    "prompt": "risks_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00017
+    }
+  },
+  {
+    "input_id": "case_001",
+    "prompt": "risks_loose",
+    "final_score": 7.45,
+    "metrics": {
+      "accuracy": 9,
+      "relevance": 8,
+      "completeness": 9,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 7,
+      "latency_score": 4,
+      "cost_score": 4,
+      "eval_cost_usd": 0.00244
+    }
+  },
+  {
+    "input_id": "case_002",
+    "prompt": "action_items_strict",
+    "final_score": 8.15,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00018
+    }
+  },
+  {
+    "input_id": "case_002",
+    "prompt": "action_items_loose",
+    "final_score": 7.7,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00037
+    }
+  },
+  {
+    "input_id": "case_002",
+    "prompt": "decisions_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00017
+    }
+  },
+  {
+    "input_id": "case_002",
+    "prompt": "decisions_loose",
+    "final_score": 7.55,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00078
+    }
+  },
+  {
+    "input_id": "case_002",
+    "prompt": "risks_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00014
+    }
+  },
+  {
+    "input_id": "case_002",
+    "prompt": "risks_loose",
+    "final_score": 7.45,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.0003
+    }
+  },
+  {
+    "input_id": "case_003",
+    "prompt": "action_items_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00018
+    }
+  },
+  {
+    "input_id": "case_003",
+    "prompt": "action_items_loose",
+    "final_score": 7.7,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00043
+    }
+  },
+  {
+    "input_id": "case_003",
+    "prompt": "decisions_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00015
+    }
+  },
+  {
+    "input_id": "case_003",
+    "prompt": "decisions_loose",
+    "final_score": 7.55,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00069
+    }
+  },
+  {
+    "input_id": "case_003",
+    "prompt": "risks_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00014
+    }
+  },
+  {
+    "input_id": "case_003",
+    "prompt": "risks_loose",
+    "final_score": 7.45,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00035
+    }
+  },
+  {
+    "input_id": "case_004",
+    "prompt": "action_items_strict",
+    "final_score": 8.15,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00019
+    }
+  },
+  {
+    "input_id": "case_004",
+    "prompt": "action_items_loose",
+    "final_score": 7.7,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.0003
+    }
+  },
+  {
+    "input_id": "case_004",
+    "prompt": "decisions_strict",
+    "final_score": 7.2,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 6,
+      "completeness": 4,
+      "consistency": 9,
+      "usefulness": 5,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00018
+    }
+  },
+  {
+    "input_id": "case_004",
+    "prompt": "decisions_loose",
+    "final_score": 7.55,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00072
+    }
+  },
+  {
+    "input_id": "case_004",
+    "prompt": "risks_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00014
+    }
+  },
+  {
+    "input_id": "case_004",
+    "prompt": "risks_loose",
+    "final_score": 7.3,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00068
+    }
+  },
+  {
+    "input_id": "case_005",
+    "prompt": "action_items_strict",
+    "final_score": 8.15,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00018
+    }
+  },
+  {
+    "input_id": "case_005",
+    "prompt": "action_items_loose",
+    "final_score": 7.7,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00036
+    }
+  },
+  {
+    "input_id": "case_005",
+    "prompt": "decisions_strict",
+    "final_score": 8.15,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 9,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00018
+    }
+  },
+  {
+    "input_id": "case_005",
+    "prompt": "decisions_loose",
+    "final_score": 7.55,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.0007
+    }
+  },
+  {
+    "input_id": "case_005",
+    "prompt": "risks_strict",
+    "final_score": 8.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 6,
+      "consistency": 10,
+      "usefulness": 7,
+      "structure": 10,
+      "conciseness": 10,
+      "latency_score": 4,
+      "cost_score": 10,
+      "eval_cost_usd": 0.00019
+    }
+  },
+  {
+    "input_id": "case_005",
+    "prompt": "risks_loose",
+    "final_score": 7.25,
+    "metrics": {
+      "accuracy": 8,
+      "relevance": 9,
+      "completeness": 7,
+      "consistency": 9,
+      "usefulness": 8,
+      "structure": 3,
+      "conciseness": 7,
+      "latency_score": 4,
+      "cost_score": 7,
+      "eval_cost_usd": 0.00153
+    }
+  }
+]

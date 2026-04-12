@@ -1,0 +1,7 @@
+rank,prompt,runs,avg_final_score,avg_accuracy,avg_relevance,avg_completeness,avg_consistency,avg_usefulness,avg_structure,avg_conciseness,avg_latency_score,avg_cost_score,structured_rate,avg_quality_score,avg_eval_cost_usd,total_eval_cost_usd,avg_latency_ms
+1,action_items_strict,5,8.37,8.4,9.2,6.4,9.4,7.4,10.0,10.0,4.0,9.4,1.0,0.875,0.0003,0.0014,
+2,risks_strict,5,8.25,8.0,9.0,6.0,10.0,7.0,10.0,10.0,4.0,10.0,1.0,0.5,0.0002,0.0008,
+3,decisions_strict,5,8.05,8.0,8.4,5.8,9.4,6.8,10.0,10.0,4.0,10.0,1.0,0.8333,0.0002,0.001,
+4,action_items_loose,5,7.88,8.4,9.2,7.4,9.2,8.2,3.0,10.0,4.0,9.4,0.0,0.1,0.0005,0.0024,
+5,decisions_loose,5,7.64,8.4,8.8,7.4,9.2,8.2,3.0,9.4,4.0,7.0,0.0,0.1,0.001,0.0048,
+6,risks_loose,5,7.38,8.2,8.8,6.8,9.0,7.4,3.0,8.8,4.0,7.6,0.0,0.1,0.0011,0.0053,

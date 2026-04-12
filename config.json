@@ -1,0 +1,21 @@
+{
+  "OPENAI_API_KEYS": [],
+  "GOOGLE_API_KEYS": [],
+  "ANTHROPIC_API_KEYS": [],
+  "GROQ_API_KEYS": [
+    "gAAAAABp25VJQS8v523omWK4pPcanw6MwX46XstLaiZS60Kmz-EycgtLItRzNBO6v2XrZvXryAdNL3EK1LDGc6r6u95aS7eeLb2q-5c-5XCsE2HBkgtxB5o1JR-Qk-wk2BDZin5kKTV1lJORasmjxYIytelTyZQSBA==",
+    "gAAAAABp25mJCxeRxVBXQarzhUhfXezjo00BgPreGcFKuKecdUbAMuMGe4f_dnKwdC7DdHqr9A9JzU1WH7TzDe1csRLpf7RNePnGmr9A1FdgEgittIyHGMwLDx--cQp2GEC3-ih6452V9-AS8sZ0dO6vATbsGmahNg=="
+  ],
+  "selected_model": "groq",
+  "weights": {
+    "accuracy": 20,
+    "relevance": 15,
+    "completeness": 15,
+    "consistency": 10,
+    "usefulness": 10,
+    "structure": 10,
+    "conciseness": 10,
+    "latency": 5,
+    "cost": 5
+  }
+}

@@ -1,0 +1,6 @@
+Criterion,Description,Weight
+Correctness,Accuracy of extracted information,35%
+Completeness,Captured all relevant items,25%
+Structure,Followed output format,20%
+Conciseness,Clarity and brevity,10%
+Usefulness,Practical usability,10%

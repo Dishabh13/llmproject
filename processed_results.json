@@ -1,0 +1,728 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-12T13:15:03.832267+00:00",
+    "input_file": "results.json",
+    "output_file": "processed_results.json",
+    "record_count": 30,
+    "schema_validation_run": false,
+    "processor_version": "1.0.0",
+    "branch": "Apheksha"
+  },
+  "summary": {
+    "total_records": 30,
+    "by_prompt": {
+      "action_items_strict": {
+        "count": 5,
+        "structured_rate": 1.0,
+        "avg_quality_score": 0.875,
+        "avg_items_extracted": 1.8,
+        "field_coverage_rates": {
+          "action": 1.0,
+          "owner": 1.0,
+          "due_date": 1.0,
+          "evidence_quote": 0.0
+        }
+      },
+      "action_items_loose": {
+        "count": 5,
+        "structured_rate": 0.0,
+        "avg_quality_score": 0.1,
+        "avg_items_extracted": 0,
+        "field_coverage_rates": {}
+      },
+      "decisions_strict": {
+        "count": 5,
+        "structured_rate": 1.0,
+        "avg_quality_score": 0.8333,
+        "avg_items_extracted": 1.2,
+        "field_coverage_rates": {
+          "decision": 1.0,
+          "context": 1.0,
+          "evidence_quote": 0.0
+        }
+      },
+      "decisions_loose": {
+        "count": 5,
+        "structured_rate": 0.0,
+        "avg_quality_score": 0.1,
+        "avg_items_extracted": 0,
+        "field_coverage_rates": {}
+      },
+      "risks_strict": {
+        "count": 5,
+        "structured_rate": 1.0,
+        "avg_quality_score": 0.5,
+        "avg_items_extracted": 1.0,
+        "field_coverage_rates": {}
+      },
+      "risks_loose": {
+        "count": 5,
+        "structured_rate": 0.0,
+        "avg_quality_score": 0.1,
+        "avg_items_extracted": 0,
+        "field_coverage_rates": {}
+      }
+    },
+    "by_model": {
+      "groq": {
+        "count": 30,
+        "structured_rate": 0.5,
+        "avg_quality_score": 0.4181,
+        "avg_items_extracted": 1.33,
+        "field_coverage_rates": {
+          "action": 1.0,
+          "owner": 1.0,
+          "due_date": 1.0,
+          "evidence_quote": 0.0,
+          "decision": 1.0,
+          "context": 1.0
+        }
+      }
+    },
+    "overall": {
+      "count": 30,
+      "structured_rate": 0.5,
+      "avg_quality_score": 0.4181,
+      "avg_items_extracted": 1.33,
+      "field_coverage_rates": {
+        "action": 1.0,
+        "owner": 1.0,
+        "due_date": 1.0,
+        "evidence_quote": 0.0,
+        "decision": 1.0,
+        "context": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "model": "groq",
+      "prompt": "action_items_strict",
+      "input_id": "case_001",
+      "output_type": "structured",
+      "final_output": {
+        "action_items": [
+          {
+            "action": "Prepare a report on the sales strategy and share it",
+            "owner": "Ananya",
+            "due_date": "next week"
+          },
+          {
+            "action": "Coordinate with the marketing team to finalize campaign materials",
+            "owner": "Rahul",
+            "due_date": "Friday"
+          },
+          {
+            "action": "Analyze competitor data and present insights",
+            "owner": "Priya",
+            "due_date": "Not specified"
+          },
+          {
+            "action": "Set up a weekly progress tracking meeting",
+            "owner": "Rahul",
+            "due_date": "Monday"
+          },
+          {
+            "action": "Update the dashboard with real-time metrics",
+            "owner": "Priya",
+            "due_date": "Wednesday"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"action_items\": [\n    {\n      \"action\": \"Prepare a report on the sales strategy and share it\",\n      \"owner\": \"Ananya\",\n      \"due_date\": \"next week\"\n    },\n    {\n      \"action\": \"Coordinate with the marketing team to finalize campaign materials\",\n      \"owner\": \"Rahul\",\n      \"due_date\": \"Friday\"\n    },\n    {\n      \"action\": \"Analyze competitor data and present insights\",\n      \"owner\": \"Priya\",\n      \"due_date\": \"Not specified\"\n    },\n    {\n      \"action\": \"Set up a weekly progress tracking meeting\",\n      \"owner\": \"Rahul\",\n      \"due_date\": \"Monday\"\n    },\n    {\n      \"action\": \"Update the dashboard with real-time metrics\",\n      \"owner\": \"Priya\",\n      \"due_date\": \"Wednesday\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.875,
+      "field_coverage": {
+        "action": true,
+        "owner": true,
+        "due_date": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_loose",
+      "input_id": "case_001",
+      "output_type": "unstructured",
+      "final_output": "Action Items:\n\n1. **Ananya**: Prepare a report on the sales strategy and share it by next week.\n2. **Rahul**:\n- Coordinate with the marketing team to finalize campaign materials by Friday.\n- Set up a weekly progress tracking meeting starting Monday.\n3. **Priya**:\n- Analyze competitor data and present insights in the next meeting.\n- Update the dashboard with real-time metrics by Wednesday.\n4. **Team**:\n- Increase the marketing budget by 15% to support the new strategy.\n- Prioritize high-value customers for initial outreach.\n- Address resource constraints to mitigate potential delays.",
+      "raw_output": "Action Items:\n\n1. **Ananya**: Prepare a report on the sales strategy and share it by next week.\n2. **Rahul**: \n   - Coordinate with the marketing team to finalize campaign materials by Friday.\n   - Set up a weekly progress tracking meeting starting Monday.\n3. **Priya**: \n   - Analyze competitor data and present insights in the next meeting.\n   - Update the dashboard with real-time metrics by Wednesday.\n4. **Team**: \n   - Increase the marketing budget by 15% to support the new strategy.\n   - Prioritize high-value customers for initial outreach.\n   - Address resource constraints to mitigate potential delays.",
+      "metadata": {
+        "processing_status": "cleaned",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_strict",
+      "input_id": "case_001",
+      "output_type": "structured",
+      "final_output": {
+        "decisions": [
+          {
+            "decision": "proceeding with the updated plan for the sales strategy",
+            "context": "sales strategy and team alignment"
+          },
+          {
+            "decision": "increasing the marketing budget by 15% to support the new strategy",
+            "context": "supporting the new sales strategy"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"decisions\": [\n    {\n      \"decision\": \"proceeding with the updated plan for the sales strategy\",\n      \"context\": \"sales strategy and team alignment\"\n    },\n    {\n      \"decision\": \"increasing the marketing budget by 15% to support the new strategy\",\n      \"context\": \"supporting the new sales strategy\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.8333,
+      "field_coverage": {
+        "decision": true,
+        "context": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_loose",
+      "input_id": "case_001",
+      "output_type": "unstructured",
+      "final_output": "The following decisions were made during the meeting:\n\n1. **Proceed with the updated sales strategy plan**: The team agreed to move forward with the updated plan.\n2. **Assign tasks to team members**:\n- Ananya: Prepare a report on the sales strategy and share it by next week.\n- Rahul: Coordinate with the marketing team to finalize campaign materials by Friday, and set up a weekly progress tracking meeting starting Monday.\n- Priya: Analyze competitor data, present insights in the next meeting, and update the dashboard with real-time metrics by Wednesday.\n3. **Increase the marketing budget**: The marketing budget will be increased by 15% to support the new strategy.\n4. **Prioritize high-value customers**: The team agreed to focus on high-value customers for initial outreach.\n5. **Address resource constraints**: Although not a direct decision, the team acknowledged the need to address resource constraints to avoid delays in the timeline.\n6. **Establish a weekly progress tracking meeting**: Starting Monday, the team will have a weekly meeting to track progress, led by Rahul.\n7. **Update the dashboard with real-time metrics**: Priya will update the dashboard by Wednesday to reflect the team's progress in real-time.",
+      "raw_output": "The following decisions were made during the meeting:\n\n1. **Proceed with the updated sales strategy plan**: The team agreed to move forward with the updated plan.\n2. **Assign tasks to team members**:\n   - Ananya: Prepare a report on the sales strategy and share it by next week.\n   - Rahul: Coordinate with the marketing team to finalize campaign materials by Friday, and set up a weekly progress tracking meeting starting Monday.\n   - Priya: Analyze competitor data, present insights in the next meeting, and update the dashboard with real-time metrics by Wednesday.\n3. **Increase the marketing budget**: The marketing budget will be increased by 15% to support the new strategy.\n4. **Prioritize high-value customers**: The team agreed to focus on high-value customers for initial outreach.\n5. **Address resource constraints**: Although not a direct decision, the team acknowledged the need to address resource constraints to avoid delays in the timeline.\n6. **Establish a weekly progress tracking meeting**: Starting Monday, the team will have a weekly meeting to track progress, led by Rahul.\n7. **Update the dashboard with real-time metrics**: Priya will update the dashboard by Wednesday to reflect the team's progress in real-time.",
+      "metadata": {
+        "processing_status": "cleaned",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_strict",
+      "input_id": "case_001",
+      "output_type": "structured",
+      "final_output": {
+        "risks": [
+          {
+            "issue": "Delays due to resource constraints",
+            "context": "which could impact the timeline if not addressed"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"risks\": [\n    {\n      \"issue\": \"Delays due to resource constraints\",\n      \"context\": \"which could impact the timeline if not addressed\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.5,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_loose",
+      "input_id": "case_001",
+      "output_type": "unstructured",
+      "final_output": "From the meeting transcript, the following risks or concerns were identified:\n\n1. **Delays due to resource constraints**: A concern was raised about the potential for delays in the project timeline if resource constraints are not addressed. This could impact the team's ability to meet deadlines and achieve their goals.\n2. **Risk of not meeting deadlines**: With multiple tasks and deadlines assigned to team members, there is a risk that some of these deadlines may not be met, which could have a ripple effect on the overall project timeline.\n3. **Dependency on individual team members**: The success of the project seems to be dependent on individual team members (e.g., Ananya, Rahul, Priya) completing their tasks on time. If any of these team members encounter issues or are unable to meet their deadlines, it could impact the project as a whole.\n4. **Potential impact of increased marketing budget**: While increasing the marketing budget by 15% may support the new strategy, it also introduces a risk of overspending or not getting the expected return on investment (ROI).\n5. **Risk of not effectively prioritizing high-value customers**: The team agreed to prioritize high-value customers for initial outreach, but if this is not done effectively, it could lead to missed opportunities or dissatisfaction among these key customers.\n\nOverall, the team has identified some potential risks and concerns, and has taken steps to mitigate them, such as setting up weekly progress tracking meetings and updating the dashboard with real-time metrics.",
+      "raw_output": "From the meeting transcript, the following risks or concerns were identified:\n\n1. **Delays due to resource constraints**: A concern was raised about the potential for delays in the project timeline if resource constraints are not addressed. This could impact the team's ability to meet deadlines and achieve their goals.\n2. **Risk of not meeting deadlines**: With multiple tasks and deadlines assigned to team members, there is a risk that some of these deadlines may not be met, which could have a ripple effect on the overall project timeline.\n3. **Dependency on individual team members**: The success of the project seems to be dependent on individual team members (e.g., Ananya, Rahul, Priya) completing their tasks on time. If any of these team members encounter issues or are unable to meet their deadlines, it could impact the project as a whole.\n4. **Potential impact of increased marketing budget**: While increasing the marketing budget by 15% may support the new strategy, it also introduces a risk of overspending or not getting the expected return on investment (ROI).\n5. **Risk of not effectively prioritizing high-value customers**: The team agreed to prioritize high-value customers for initial outreach, but if this is not done effectively, it could lead to missed opportunities or dissatisfaction among these key customers.\n\nOverall, the team has identified some potential risks and concerns, and has taken steps to mitigate them, such as setting up weekly progress tracking meetings and updating the dashboard with real-time metrics.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_strict",
+      "input_id": "case_002",
+      "output_type": "structured",
+      "final_output": {
+        "action_items": [
+          {
+            "action": "Prepare a report on the mobile app development",
+            "owner": "Priya and John",
+            "due_date": "Next week"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"action_items\": [\n    {\n      \"action\": \"Prepare a report on the mobile app development\",\n      \"owner\": \"Priya and John\",\n      \"due_date\": \"Next week\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.875,
+      "field_coverage": {
+        "action": true,
+        "owner": true,
+        "due_date": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_loose",
+      "input_id": "case_002",
+      "output_type": "unstructured",
+      "final_output": "Action Items:\n\n1. **Priya and John**: Prepare a report on the mobile app development.\n2. **Priya and John**: Share the report by next week.\n3. **Team/Responsible Person**: Address vendor reliability concerns to prevent potential timeline impacts.",
+      "raw_output": "Action Items:\n\n1. **Priya and John**: Prepare a report on the mobile app development.\n2. **Priya and John**: Share the report by next week.\n3. **Team/Responsible Person**: Address vendor reliability concerns to prevent potential timeline impacts.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_strict",
+      "input_id": "case_002",
+      "output_type": "structured",
+      "final_output": {
+        "decisions": [
+          {
+            "decision": "proceed with the updated plan for the mobile app development",
+            "context": "mobile app development"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"decisions\": [\n    {\n      \"decision\": \"proceed with the updated plan for the mobile app development\",\n      \"context\": \"mobile app development\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.8333,
+      "field_coverage": {
+        "decision": true,
+        "context": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_loose",
+      "input_id": "case_002",
+      "output_type": "unstructured",
+      "final_output": "From the meeting transcript, the following decisions were made:\n\n1. To proceed with the updated plan for the mobile app development.\n2. Priya and John will prepare a report on the mobile app development.\n3. The report will be shared by next week.\n\nNote that the vendor reliability concern was raised, but no decision was made to address it in the provided transcript. It is likely that this issue will be discussed further in a future meeting.",
+      "raw_output": "From the meeting transcript, the following decisions were made:\n\n1. To proceed with the updated plan for the mobile app development.\n2. Priya and John will prepare a report on the mobile app development.\n3. The report will be shared by next week.\n\nNote that the vendor reliability concern was raised, but no decision was made to address it in the provided transcript. It is likely that this issue will be discussed further in a future meeting.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_strict",
+      "input_id": "case_002",
+      "output_type": "structured",
+      "final_output": {
+        "risks": [
+          {
+            "issue": "vendor reliability concerns",
+            "context": "could impact the timeline if not addressed"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"risks\": [\n    {\n      \"issue\": \"vendor reliability concerns\",\n      \"context\": \"could impact the timeline if not addressed\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.5,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_loose",
+      "input_id": "case_002",
+      "output_type": "unstructured",
+      "final_output": "The risk or concern identified from the meeting transcript is:\n\n1. **Vendor reliability concerns**: This could potentially impact the timeline of the mobile app development project if not addressed.",
+      "raw_output": "The risk or concern identified from the meeting transcript is:\n\n1. **Vendor reliability concerns**: This could potentially impact the timeline of the mobile app development project if not addressed.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_strict",
+      "input_id": "case_003",
+      "output_type": "structured",
+      "final_output": {
+        "action_items": [
+          {
+            "action": "Prepare a report on the website redesign and share it",
+            "owner": "Karan",
+            "due_date": "next week"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"action_items\": [\n    {\n      \"action\": \"Prepare a report on the website redesign and share it\",\n      \"owner\": \"Karan\",\n      \"due_date\": \"next week\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.875,
+      "field_coverage": {
+        "action": true,
+        "owner": true,
+        "due_date": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_loose",
+      "input_id": "case_003",
+      "output_type": "unstructured",
+      "final_output": "**Action Items:**\n\n1. **Karan**: Prepare a report on the website redesign and share it by next week.\n2. **Team**: Address technical debt accumulation to prevent potential timeline impacts.\n\nThese action items are based on the agreements and discussions made during the meeting.",
+      "raw_output": "**Action Items:**\n\n1. **Karan**: Prepare a report on the website redesign and share it by next week.\n2. **Team**: Address technical debt accumulation to prevent potential timeline impacts.\n\nThese action items are based on the agreements and discussions made during the meeting.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_strict",
+      "input_id": "case_003",
+      "output_type": "structured",
+      "final_output": {
+        "decisions": [
+          {
+            "decision": "proceed with the updated plan for the website redesign",
+            "context": "website redesign"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"decisions\": [\n    {\n      \"decision\": \"proceed with the updated plan for the website redesign\",\n      \"context\": \"website redesign\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.8333,
+      "field_coverage": {
+        "decision": true,
+        "context": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_loose",
+      "input_id": "case_003",
+      "output_type": "unstructured",
+      "final_output": "The following decisions were identified from the meeting transcript:\n\n1. To proceed with the updated plan for the website redesign.\n2. Karan will prepare a report on the website redesign and share it by next week.\n\nNote that the concern about technical debt accumulation was raised, but no specific decision was made to address it. It was only identified as a potential issue that could impact the timeline.",
+      "raw_output": "The following decisions were identified from the meeting transcript:\n\n1. To proceed with the updated plan for the website redesign.\n2. Karan will prepare a report on the website redesign and share it by next week.\n\nNote that the concern about technical debt accumulation was raised, but no specific decision was made to address it. It was only identified as a potential issue that could impact the timeline.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_strict",
+      "input_id": "case_003",
+      "output_type": "structured",
+      "final_output": {
+        "risks": [
+          {
+            "issue": "Technical debt accumulation",
+            "context": "could impact the timeline if not addressed"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"risks\": [\n    {\n      \"issue\": \"Technical debt accumulation\",\n      \"context\": \"could impact the timeline if not addressed\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.5,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_loose",
+      "input_id": "case_003",
+      "output_type": "unstructured",
+      "final_output": "The identified risk or concern from the meeting transcript is:\n\n1. **Technical debt accumulation**: If not addressed, it could impact the timeline of the website redesign project, potentially leading to delays or other issues.",
+      "raw_output": "The identified risk or concern from the meeting transcript is:\n\n1. **Technical debt accumulation**: If not addressed, it could impact the timeline of the website redesign project, potentially leading to delays or other issues.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_strict",
+      "input_id": "case_004",
+      "output_type": "structured",
+      "final_output": {
+        "action_items": [
+          {
+            "action": "Prepare a report on the mobile app development and share it",
+            "owner": "Anil",
+            "due_date": "next week"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"action_items\": [\n    {\n      \"action\": \"Prepare a report on the mobile app development and share it\",\n      \"owner\": \"Anil\",\n      \"due_date\": \"next week\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.875,
+      "field_coverage": {
+        "action": true,
+        "owner": true,
+        "due_date": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_loose",
+      "input_id": "case_004",
+      "output_type": "unstructured",
+      "final_output": "Action Items:\n\n1. **Anil**: Prepare a report on the mobile app development and share it by next week.\n2. **Team**: Address data security vulnerabilities to prevent potential timeline impacts.",
+      "raw_output": "Action Items:\n\n1. **Anil**: Prepare a report on the mobile app development and share it by next week.\n2. **Team**: Address data security vulnerabilities to prevent potential timeline impacts.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_strict",
+      "input_id": "case_004",
+      "output_type": "structured",
+      "final_output": {
+        "decisions": [
+          {
+            "decision": "to proceed with the updated plan for the mobile app development",
+            "context": "mobile app development"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"decisions\": [\n    {\n      \"decision\": \"to proceed with the updated plan for the mobile app development\",\n      \"context\": \"mobile app development\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.8333,
+      "field_coverage": {
+        "decision": true,
+        "context": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_loose",
+      "input_id": "case_004",
+      "output_type": "unstructured",
+      "final_output": "The decisions from the meeting transcript are:\n\n1. To proceed with the updated plan for the mobile app development.\n2. Anil will prepare a report on the mobile app development.\n3. Anil will share the report by next week.\n\nNote: The concern about data security vulnerabilities was raised, but no specific decision was made regarding how to address it. It was mentioned as a potential issue that could impact the timeline.",
+      "raw_output": "The decisions from the meeting transcript are:\n\n1. To proceed with the updated plan for the mobile app development.\n2. Anil will prepare a report on the mobile app development.\n3. Anil will share the report by next week.\n\nNote: The concern about data security vulnerabilities was raised, but no specific decision was made regarding how to address it. It was mentioned as a potential issue that could impact the timeline.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_strict",
+      "input_id": "case_004",
+      "output_type": "structured",
+      "final_output": {
+        "risks": [
+          {
+            "issue": "Data security vulnerabilities",
+            "context": "Could impact the timeline if not addressed"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"risks\": [\n    {\n      \"issue\": \"Data security vulnerabilities\",\n      \"context\": \"Could impact the timeline if not addressed\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.5,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_loose",
+      "input_id": "case_004",
+      "output_type": "unstructured",
+      "final_output": "The risks or concerns identified from the meeting transcript are:\n\n1. **Data security vulnerabilities**: This is a concern that could potentially impact the timeline of the mobile app development project if not addressed. It suggests that there may be weaknesses in the app's security that could put user data at risk, and that these vulnerabilities need to be resolved in order to move forward with the project.",
+      "raw_output": "The risks or concerns identified from the meeting transcript are:\n\n1. **Data security vulnerabilities**: This is a concern that could potentially impact the timeline of the mobile app development project if not addressed. It suggests that there may be weaknesses in the app's security that could put user data at risk, and that these vulnerabilities need to be resolved in order to move forward with the project.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_strict",
+      "input_id": "case_005",
+      "output_type": "structured",
+      "final_output": {
+        "action_items": [
+          {
+            "action": "Prepare a report on the sales strategy and share it",
+            "owner": "James",
+            "due_date": "Next week"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"action_items\": [\n    {\n      \"action\": \"Prepare a report on the sales strategy and share it\",\n      \"owner\": \"James\",\n      \"due_date\": \"Next week\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.875,
+      "field_coverage": {
+        "action": true,
+        "owner": true,
+        "due_date": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "action_items_loose",
+      "input_id": "case_005",
+      "output_type": "unstructured",
+      "final_output": "**Action Items:**\n\n1. **James**: Prepare a report on the sales strategy.\n2. **James**: Share the report by next week.\n3. **Team**: Address the concern about tight deadlines to ensure it does not impact the timeline.",
+      "raw_output": "**Action Items:**\n\n1. **James**: Prepare a report on the sales strategy.\n2. **James**: Share the report by next week.\n3. **Team**: Address the concern about tight deadlines to ensure it does not impact the timeline.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_strict",
+      "input_id": "case_005",
+      "output_type": "structured",
+      "final_output": {
+        "decisions": [
+          {
+            "decision": "proceed with the updated plan for the sales strategy",
+            "context": "sales strategy and team alignment"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"decisions\": [\n    {\n      \"decision\": \"proceed with the updated plan for the sales strategy\",\n      \"context\": \"sales strategy and team alignment\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.8333,
+      "field_coverage": {
+        "decision": true,
+        "context": true,
+        "evidence_quote": false
+      }
+    },
+    {
+      "model": "groq",
+      "prompt": "decisions_loose",
+      "input_id": "case_005",
+      "output_type": "unstructured",
+      "final_output": "The decisions identified from the meeting transcript are:\n\n1. To proceed with the updated plan for the sales strategy.\n2. James will prepare a report on the sales strategy.\n3. James will share the report by next week.\n\nNote that the concern about tight deadlines was raised, but no specific decision was made to address it. It was simply acknowledged as a potential issue that could impact the timeline.",
+      "raw_output": "The decisions identified from the meeting transcript are:\n\n1. To proceed with the updated plan for the sales strategy.\n2. James will prepare a report on the sales strategy.\n3. James will share the report by next week.\n\nNote that the concern about tight deadlines was raised, but no specific decision was made to address it. It was simply acknowledged as a potential issue that could impact the timeline.",
+      "metadata": {
+        "processing_status": "raw",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_strict",
+      "input_id": "case_005",
+      "output_type": "structured",
+      "final_output": {
+        "risks": [
+          {
+            "issue": "Tight deadlines impacting the timeline",
+            "context": "The team's discussion on the sales strategy and next steps"
+          }
+        ]
+      },
+      "raw_output": "{\n  \"risks\": [\n    {\n      \"issue\": \"Tight deadlines impacting the timeline\",\n      \"context\": \"The team's discussion on the sales strategy and next steps\"\n    }\n  ]\n}",
+      "metadata": {
+        "processing_status": "parsed",
+        "parse_method": "direct",
+        "notes": "JSON parsed (method=direct)"
+      },
+      "quality_score": 0.5,
+      "field_coverage": {}
+    },
+    {
+      "model": "groq",
+      "prompt": "risks_loose",
+      "input_id": "case_005",
+      "output_type": "unstructured",
+      "final_output": "The identified risks or concerns from the meeting transcript are:\n\n1. **Tight deadlines**: The team is concerned that the tight deadlines may impact the timeline, which could potentially lead to delays or difficulties in meeting the sales strategy objectives.\n\nThis is the only explicit concern mentioned in the transcript. However, implicit risks may also include:\n\n2. **Dependency on James' report**: The team's progress may be dependent on James' ability to prepare and share the report on time, which could create a bottleneck if he encounters any issues or delays.\n3. **Unclear next steps**: Although the team agreed to proceed with the updated plan, it is not explicitly stated that all team members have a clear understanding of their roles and responsibilities, which could lead to confusion or misalignment.\n\nOverall, the primary concern raised in the meeting transcript is the tight deadlines, which could have a ripple effect on the entire sales strategy.",
+      "raw_output": "The identified risks or concerns from the meeting transcript are:\n\n1. **Tight deadlines**: The team is concerned that the tight deadlines may impact the timeline, which could potentially lead to delays or difficulties in meeting the sales strategy objectives. \n\nThis is the only explicit concern mentioned in the transcript. However, implicit risks may also include:\n\n2. **Dependency on James' report**: The team's progress may be dependent on James' ability to prepare and share the report on time, which could create a bottleneck if he encounters any issues or delays.\n3. **Unclear next steps**: Although the team agreed to proceed with the updated plan, it is not explicitly stated that all team members have a clear understanding of their roles and responsibilities, which could lead to confusion or misalignment.\n\nOverall, the primary concern raised in the meeting transcript is the tight deadlines, which could have a ripple effect on the entire sales strategy.",
+      "metadata": {
+        "processing_status": "cleaned",
+        "parse_method": "none",
+        "notes": "Unstructured text; light cleanup applied"
+      },
+      "quality_score": 0.1,
+      "field_coverage": {}
+    }
+  ]
+}

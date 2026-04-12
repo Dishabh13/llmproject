@@ -1,0 +1,13 @@
+[
+  {
+    "input_id": "file_tmpuu1w6tan_8f0737",
+    "source_file": "input-12.docx",
+    "text": "The meeting began with general updates from different teams regarding their ongoing work. Most teams reported steady progress, although some minor delays were mentioned in the analytics module due to unexpected data inconsistencies.\nAs the discussion progressed, it was confirmed that the release of the analytics module will be delayed by one week. This decision was made after identifying multiple inconsistencies in the data processing pipeline, which could affect the accuracy of reported metrics if released prematurely.\nRohit mentioned that he is willing to take responsibility for fixing the data pipeline issues, including debugging data transformation logic and validating outputs. However, no specific deadline was committed for this work, and it was acknowledged that timelines may depend on the complexity of the issues discovered.\nThere were also discussions around improving dashboard performance and optimizing query execution times. While several suggestions were shared, including caching strategies and database indexing, no concrete action items were finalized during this part of the meeting.\nA major concern raised was that releasing inaccurate analytics data could lead to incorrect business decisions by stakeholders. This could have downstream impacts on strategic planning and performance evaluation. Additionally, there is a risk that continued inaccuracies may reduce stakeholder trust in the system over time.\nSome participants briefly discussed long-term improvements to the analytics architecture, but these ideas were exploratory in nature and were not formalized into decisions or actionable tasks.\nThe meeting ended with agreement on delaying the release and prioritizing issue resolution before moving forward.",
+    "metadata": {
+      "source_type": "file_upload",
+      "original_extension": ".docx",
+      "char_count": 1745,
+      "word_count": 248
+    }
+  }
+]

@@ -1,0 +1,42 @@
+prompt,best_input_id,best_quality_score,best_output_type,best_output,worst_input_id,worst_quality_score,worst_output_type,worst_output
+action_items_loose,case_001,0.1,unstructured,"Action Items:
+
+1. **Ananya**: Prepare a report on the sales strategy and share it by next week.
+2. **Rahul**:
+- Coordinate with the marketing team to finalize campaign materials by Friday.
+- Set up a weekly progress tracking meeting starting Monday.
+3. **Priya**:
+- Analyze competitor data and present insights in the next meeting.
+- Update the dashboard with real-time metrics by Wednesday.
+4. **Team**:
+- Increase the marketing budget by 15% to sup",case_005,0.1,unstructured,"**Action Items:**
+
+1. **James**: Prepare a report on the sales strategy.
+2. **James**: Share the report by next week.
+3. **Team**: Address the concern about tight deadlines to ensure it does not impact the timeline."
+action_items_strict,case_001,0.875,structured,"{'action_items': [{'action': 'Prepare a report on the sales strategy and share it', 'owner': 'Ananya', 'due_date': 'next week'}, {'action': 'Coordinate with the marketing team to finalize campaign materials', 'owner': 'Rahul', 'due_date': 'Friday'}, {'action': 'Analyze competitor data and present insights', 'owner': 'Priya', 'due_date': 'Not specified'}, {'action': 'Set up a weekly progress tracking meeting', 'owner': 'Rahul', 'due_date': 'Monday",case_005,0.875,structured,"{'action_items': [{'action': 'Prepare a report on the sales strategy and share it', 'owner': 'James', 'due_date': 'Next week'}]}"
+decisions_loose,case_001,0.1,unstructured,"The following decisions were made during the meeting:
+
+1. **Proceed with the updated sales strategy plan**: The team agreed to move forward with the updated plan.
+2. **Assign tasks to team members**:
+- Ananya: Prepare a report on the sales strategy and share it by next week.
+- Rahul: Coordinate with the marketing team to finalize campaign materials by Friday, and set up a weekly progress tracking meeting starting Monday.
+- Priya: Analyze competit",case_005,0.1,unstructured,"The decisions identified from the meeting transcript are:
+
+1. To proceed with the updated plan for the sales strategy.
+2. James will prepare a report on the sales strategy.
+3. James will share the report by next week.
+
+Note that the concern about tight deadlines was raised, but no specific decision was made to address it. It was simply acknowledged as a potential issue that could impact the timeline."
+decisions_strict,case_001,0.8333,structured,"{'decisions': [{'decision': 'proceeding with the updated plan for the sales strategy', 'context': 'sales strategy and team alignment'}, {'decision': 'increasing the marketing budget by 15% to support the new strategy', 'context': 'supporting the new sales strategy'}]}",case_005,0.8333,structured,"{'decisions': [{'decision': 'proceed with the updated plan for the sales strategy', 'context': 'sales strategy and team alignment'}]}"
+risks_loose,case_001,0.1,unstructured,"From the meeting transcript, the following risks or concerns were identified:
+
+1. **Delays due to resource constraints**: A concern was raised about the potential for delays in the project timeline if resource constraints are not addressed. This could impact the team's ability to meet deadlines and achieve their goals.
+2. **Risk of not meeting deadlines**: With multiple tasks and deadlines assigned to team members, there is a risk that some of th",case_005,0.1,unstructured,"The identified risks or concerns from the meeting transcript are:
+
+1. **Tight deadlines**: The team is concerned that the tight deadlines may impact the timeline, which could potentially lead to delays or difficulties in meeting the sales strategy objectives.
+
+This is the only explicit concern mentioned in the transcript. However, implicit risks may also include:
+
+2. **Dependency on James' report**: The team's progress may be dependent on James' "
+risks_strict,case_001,0.5,structured,"{'risks': [{'issue': 'Delays due to resource constraints', 'context': 'which could impact the timeline if not addressed'}]}",case_005,0.5,structured,"{'risks': [{'issue': 'Tight deadlines impacting the timeline', 'context': ""The team's discussion on the sales strategy and next steps""}]}"

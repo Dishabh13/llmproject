@@ -1,0 +1,7 @@
+{
+  "top_prompt": "action_items_strict",
+  "top_score": 8.37,
+  "key_win_reason": "Highest average score (8.37) with structured rate 100%.",
+  "biggest_weakness": "Main weakness is latency.",
+  "recommendation": "Ship action_items_strict and improve latency next."
+}

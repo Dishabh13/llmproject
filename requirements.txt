@@ -1,0 +1,30 @@
+openai
+groq
+google-generativeai
+anthropic
+
+requests
+python-dotenv
+
+pandas
+openpyxl
+
+plotly
+kaleido
+
+fastapi
+uvicorn
+python-multipart
+
+jsonschema>=4.0
+pytest>=7.0
+
+# File parsing
+pypdf
+python-docx
+pdfminer.six
+
+# Encryption for API keys
+cryptography
+
+sentence-transformers

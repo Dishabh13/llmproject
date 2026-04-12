@@ -1,0 +1,451 @@
+
+<html>
+<head>
+<title>LLM Evaluation Report</title>
+<style>
+body {
+    font-family: 'Segoe UI', Arial;
+    background: #f4f7fb;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 92%;
+    margin: 20px auto;
+}
+.header {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #e8f0fe;
+    color: #174ea6;
+    font-size: 13px;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+.button-row {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.small {
+    color: #555;
+    font-size: 14px;
+}
+details {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+summary {
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+.section-body {
+    padding: 0 20px 20px 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+.card {
+    background: #fafbff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 14px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    font-size: 14px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 9px;
+    text-align: left;
+    vertical-align: top;
+}
+th {
+    background: #2f3b52;
+    color: white;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: #f8f9fb;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin: 8px 0;
+    min-height: 90px;
+}
+a.button {
+    display: inline-block;
+    padding: 10px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+a.button.secondary {
+    background: #64748b;
+}
+.example-box {
+    margin-bottom: 18px;
+    padding: 14px;
+    background: #fafbff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+@media (max-width: 900px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
+.muted {
+    color: #667085;
+    font-size: 13px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>LLM Evaluation Report</h1>
+        <p class="small">This report compares prompt versions using a weighted rubric, ranked scores, charts, and example outputs.</p>
+        <span class="badge">Top Prompt: action_items_strict</span>
+        <span class="badge">Top Score: 8.37</span>
+        <span class="badge">Prompts: 6</span>
+        <span class="badge">Runs: 30</span>
+        <div class="button-row">
+            <a class="button" href="/static/ranked_comparison_table.csv" download>Download Full CSV</a>
+            <a class="button" href="/static/scoring_rubric.csv" download>Download Rubric CSV</a>
+            <a class="button" href="/static/executive_summary.json" download>Download Summary JSON</a>
+            <a class="button" href="/static/example_cases.csv" download>Download Examples CSV</a>
+            <a class="button secondary" href="/static/case_index.html" target="_blank">Open HTML Summary</a>
+        </div>
+    </div>
+
+    <details open>
+        <summary>Executive Summary</summary>
+        <div class="section-body">
+            <div class="grid">
+                <div class="card">
+                    <p><b>Top prompt:</b> action_items_strict</p>
+                    <p><b>Top score:</b> 8.37</p>
+                    <p><b>Key win reason:</b> Highest average score (8.37) with structured rate 100%.</p>
+                    <p><b>Biggest weakness:</b> Main weakness is latency.</p>
+                    <p><b>Recommendation:</b> Ship action_items_strict and improve latency next.</p>
+                </div>
+                <div class="card">
+                    <p><b>Best signal:</b> high correctness and completeness with structured output.</p>
+                    <p><b>Decision rule:</b> rank by final score, then inspect structure and completeness.</p>
+                    <p><b>Review focus:</b> compare top prompts side-by-side before shipping.</p>
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Scoring Rubric</summary>
+        <div class="section-body">
+            <div class="grid">
+                <div class="card"><b>Correctness</b><br>Accuracy of extracted information.</div>
+                <div class="card"><b>Completeness</b><br>Captured all relevant items.</div>
+                <div class="card"><b>Structure</b><br>Followed the required output format.</div>
+                <div class="card"><b>Conciseness</b><br>Clarity and brevity.</div>
+                <div class="card"><b>Usefulness</b><br>Practical usability.</div>
+            </div>
+            <div class="card" style="margin-top:14px;">
+                <h4>Rubric Weights</h4>
+                <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Criterion</th>
+      <th>Description</th>
+      <th>Weight</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Correctness</td>
+      <td>Accuracy of extracted information</td>
+      <td>35%</td>
+    </tr>
+    <tr>
+      <td>Completeness</td>
+      <td>Captured all relevant items</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td>Structure</td>
+      <td>Followed output format</td>
+      <td>20%</td>
+    </tr>
+    <tr>
+      <td>Conciseness</td>
+      <td>Clarity and brevity</td>
+      <td>10%</td>
+    </tr>
+    <tr>
+      <td>Usefulness</td>
+      <td>Practical usability</td>
+      <td>10%</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Ranked Comparison</summary>
+        <div class="section-body">
+            <p class="muted">Small on-screen table for quick reading. Full detailed CSV is available in exports.</p>
+            <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Rank</th>
+      <th>Prompt</th>
+      <th>Score</th>
+      <th>Correctness</th>
+      <th>Completeness</th>
+      <th>Structured Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>action_items_strict</td>
+      <td>8.37</td>
+      <td>8.4</td>
+      <td>6.4</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>risks_strict</td>
+      <td>8.25</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>decisions_strict</td>
+      <td>8.05</td>
+      <td>8.0</td>
+      <td>5.8</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>action_items_loose</td>
+      <td>7.88</td>
+      <td>8.4</td>
+      <td>7.4</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>decisions_loose</td>
+      <td>7.64</td>
+      <td>8.4</td>
+      <td>7.4</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>risks_loose</td>
+      <td>7.38</td>
+      <td>8.2</td>
+      <td>6.8</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+    </details>
+
+    <details>
+        <summary>Charts</summary>
+        <div class="section-body">
+            <div class="grid">
+                <div class="card">
+                    <h3>Prompt Ranking</h3>
+                    <img src="/static/prompt_scores.png" alt="Prompt ranking chart">
+                </div>
+                <div class="card">
+                    <h3>Metric Breakdown</h3>
+                    <img src="/static/metric_breakdown.png" alt="Metric breakdown chart">
+                </div>
+                <div class="card">
+                    <h3>Latency Tradeoff</h3>
+                    <img src="/static/quality_latency.png" alt="Latency tradeoff chart">
+                </div>
+            </div>
+        </div>
+    </details>
+
+    <details>
+        <summary>Side-by-Side Outputs</summary>
+        <div class="section-body">
+            <p class="muted">Compare the best and worst outputs per prompt in a compact side-by-side layout.</p>
+            
+    <div class="example-box">
+        <h4>action_items_loose</h4>
+        <div class="two-col">
+            <div>
+                <p><b>Best</b> | case_001 | score 0.1</p>
+                <pre>Action Items:
+
+1. **Ananya**: Prepare a report on the sales strategy and share it by next week.
+2. **Rahul**:
+- Coordinate with the marketing team to finalize campaign materials by Friday.
+- Set up a weekly progress tracking meeting starting Monday.
+3. **Priya**:
+- Analyze competitor data and present insights in the next meeting.
+- Update the dashboard with real-time metrics by Wednesday.
+4. **Team**:
+- Increase the marketing budget by 15% to sup</pre>
+            </div>
+            <div>
+                <p><b>Worst</b> | case_005 | score 0.1</p>
+                <pre>**Action Items:**
+
+1. **James**: Prepare a report on the sales strategy.
+2. **James**: Share the report by next week.
+3. **Team**: Address the concern about tight deadlines to ensure it does not impact the timeline.</pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="example-box">
+        <h4>action_items_strict</h4>
+        <div class="two-col">
+            <div>
+                <p><b>Best</b> | case_001 | score 0.875</p>
+                <pre>{'action_items': [{'action': 'Prepare a report on the sales strategy and share it', 'owner': 'Ananya', 'due_date': 'next week'}, {'action': 'Coordinate with the marketing team to finalize campaign materials', 'owner': 'Rahul', 'due_date': 'Friday'}, {'action': 'Analyze competitor data and present insights', 'owner': 'Priya', 'due_date': 'Not specified'}, {'action': 'Set up a weekly progress tracking meeting', 'owner': 'Rahul', 'due_date': 'Monday</pre>
+            </div>
+            <div>
+                <p><b>Worst</b> | case_005 | score 0.875</p>
+                <pre>{'action_items': [{'action': 'Prepare a report on the sales strategy and share it', 'owner': 'James', 'due_date': 'Next week'}]}</pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="example-box">
+        <h4>decisions_loose</h4>
+        <div class="two-col">
+            <div>
+                <p><b>Best</b> | case_001 | score 0.1</p>
+                <pre>The following decisions were made during the meeting:
+
+1. **Proceed with the updated sales strategy plan**: The team agreed to move forward with the updated plan.
+2. **Assign tasks to team members**:
+- Ananya: Prepare a report on the sales strategy and share it by next week.
+- Rahul: Coordinate with the marketing team to finalize campaign materials by Friday, and set up a weekly progress tracking meeting starting Monday.
+- Priya: Analyze competit</pre>
+            </div>
+            <div>
+                <p><b>Worst</b> | case_005 | score 0.1</p>
+                <pre>The decisions identified from the meeting transcript are:
+
+1. To proceed with the updated plan for the sales strategy.
+2. James will prepare a report on the sales strategy.
+3. James will share the report by next week.
+
+Note that the concern about tight deadlines was raised, but no specific decision was made to address it. It was simply acknowledged as a potential issue that could impact the timeline.</pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="example-box">
+        <h4>decisions_strict</h4>
+        <div class="two-col">
+            <div>
+                <p><b>Best</b> | case_001 | score 0.8333</p>
+                <pre>{'decisions': [{'decision': 'proceeding with the updated plan for the sales strategy', 'context': 'sales strategy and team alignment'}, {'decision': 'increasing the marketing budget by 15% to support the new strategy', 'context': 'supporting the new sales strategy'}]}</pre>
+            </div>
+            <div>
+                <p><b>Worst</b> | case_005 | score 0.8333</p>
+                <pre>{'decisions': [{'decision': 'proceed with the updated plan for the sales strategy', 'context': 'sales strategy and team alignment'}]}</pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="example-box">
+        <h4>risks_loose</h4>
+        <div class="two-col">
+            <div>
+                <p><b>Best</b> | case_001 | score 0.1</p>
+                <pre>From the meeting transcript, the following risks or concerns were identified:
+
+1. **Delays due to resource constraints**: A concern was raised about the potential for delays in the project timeline if resource constraints are not addressed. This could impact the team's ability to meet deadlines and achieve their goals.
+2. **Risk of not meeting deadlines**: With multiple tasks and deadlines assigned to team members, there is a risk that some of th</pre>
+            </div>
+            <div>
+                <p><b>Worst</b> | case_005 | score 0.1</p>
+                <pre>The identified risks or concerns from the meeting transcript are:
+
+1. **Tight deadlines**: The team is concerned that the tight deadlines may impact the timeline, which could potentially lead to delays or difficulties in meeting the sales strategy objectives.
+
+This is the only explicit concern mentioned in the transcript. However, implicit risks may also include:
+
+2. **Dependency on James' report**: The team's progress may be dependent on James' </pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="example-box">
+        <h4>risks_strict</h4>
+        <div class="two-col">
+            <div>
+                <p><b>Best</b> | case_001 | score 0.5</p>
+                <pre>{'risks': [{'issue': 'Delays due to resource constraints', 'context': 'which could impact the timeline if not addressed'}]}</pre>
+            </div>
+            <div>
+                <p><b>Worst</b> | case_005 | score 0.5</p>
+                <pre>{'risks': [{'issue': 'Tight deadlines impacting the timeline', 'context': "The team's discussion on the sales strategy and next steps"}]}</pre>
+            </div>
+        </div>
+    </div>
+    
+        </div>
+    </details>
+</div>
+</body>
+</html>
